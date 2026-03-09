@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyxveil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop">
+
+  <!-- Top Bar -->
+  <nav class="topbar">
+    <div class="topbar-brand"><span>yourname.dev</span></div>
+    <div class="topbar-nav">
+      <button class="nav-btn" onclick="openModal('about-modal')">about</button>
+      <button class="nav-btn" onclick="openModal('work-modal')">portfolio</button>
+      <button class="nav-btn" onclick="openModal('faq-modal')">faq</button>
+      <button class="nav-btn" onclick="openModal('contact-modal')">contact</button>
+    </div>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow"><span>welcome to my corner of the web ✦</span></p>
+    <h1>hi, i'm <span>Nyxveil</span></h1>
+    <p class="hero-sub">creator, maker, and curious person</p>
+    <div class="hero-tags">
+      <span class="tag accent">✦ open to work</span>
+      <span class="tag">design</span>
+      <span class="tag accent2">music video</span>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <div class="grid">
+
+    <!-- About Panel -->
+    <div class="panel" onclick="openModal('about-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">about.txt</span>
+      </div>
+      <div class="panel-body">
+        <img src="logo.png" alt="logo" style="width:70px;height:70px;object-fit:cover;border-radius:50%">
+        <div class="about-name"><span title="Nama kamu">Nyxveil</span></div>
+        <div class="about-role"><span title="Role singkat kamu">// arch student + freelance creative</span></div>
+        <div class="about-bio"><span title="Bio singkat kamu">Based somewhere on this planet. Designing spaces by study, crafting visuals by passion, and too much coffee. Click to read more.</span></div>
+      </div>
+    </div>
+
+    <!-- Status Panel -->
+    <div class="panel" onclick="openModal('work-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">status.json</span>
+      </div>
+      <div class="panel-body">
+        <div id="clock" class="clock">00:00</div>
+        <div id="clockDate" class="clock-date">loading...</div>
+        <br>
+        <div class="status-big">currently working on ✦</div>
+        <div class="avail-badge">available for commission</div>
+        <div class="status-line"><span class="dot-live"></span> <span>taking commission projects</span></div>
+        <div class="status-line"><span>📌 a fun side project (secret for now)</span></div>
+        <div class="status-line"><span>🎬 new music video production</span></div>
+      </div>
+    </div>
+
+    <!-- Gallery Panel -->
+    <div class="panel tall" onclick="openModal('gallery-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">gallery/</span>
+      </div>
+      <div class="panel-body">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="assett/fanart1.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">fan art</span></div></div>
+          <!-- <div class="gallery-item"><img src="assett/fanart1.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">original char</span></div></div>
+          <div class="gallery-item"><img src="assett/fanart1.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">zine piece</span></div></div> -->
+          <div class="gallery-item"><img src="assett/tamnel.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">personal project</span></div></div>
+          <!--<div class="gallery-item"><img src="assett/fanart1.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">commission</span></div></div> -->
+          <div class="gallery-item"><img src="assett/tumnail hope is a.png" alt="fan art #1" style="width:100%;height:100%;object-fit:cover"><div class="gallery-overlay"><span class="gallery-label">music video</span></div></div>
+        </div>
+        <br>
+        <p style="font-size:0.7rem;color:var(--text-muted)">click to see full gallery ↗</p>
+      </div>
+    </div>
+
+    <!-- Links Panel -->
+    <div class="panel" onclick="openModal('links-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">links.html</span>
+      </div>
+      <div class="panel-body">
+        <div class="links-grid">
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon">🐦</span> twitter</a>
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon">▶️</span> youtube</a>
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon">📸</span> instagram</a>
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon">💙</span> bluesky</a>
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon">☕</span> ko-fi</a>
+          <a class="link-item" href="#" onclick="openModal('links-modal');return false;"><span class="link-icon"><img src="logo-dark.svg" style="width:30px;height:30px;object-fit:contain"></span> VGen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Panel -->
+    <div class="panel" onclick="openModal('faq-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">faq.md</span>
+      </div>
+      <div class="panel-body">
+        <div class="faq-item">
+          <div class="faq-q">are you open for commissions?</div>
+          <div class="faq-a">Yes! You can request on my VGen!.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">what kind of work do you do?</div>
+          <div class="faq-a">music video, and architectural design</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">how long does a project take?</div>
+          <div class="faq-a">Depends on scope. Honest timeline upfront always.</div>
+        </div>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:10px">click for more ↗</p>
+      </div>
+    </div>
+
+    <!-- Contact Panel -->
+    <div class="panel wide" onclick="openModal('contact-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">contact.sh</span>
+      </div>
+      <div class="panel-body">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+          <div>
+            <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px">// say hello!</div>
+            <div class="contact-email"><span>nyxia093@gmail.com</span></div>
+            <div style="font-size:0.75rem;color:var(--text-muted)">i do music videos, and architectural design!</div>
+          </div>
+          <a class="contact-btn" href="mailto:hello@youremail.com" onclick="event.stopPropagation()">send me an email ✉</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>made with ♥ · © 2026 <span>Nyxveil</span> · <span id="footerTime"></span></p>
+  </footer>
+</div>
+
+
+<!-- ABOUT MODAL -->
+<div class="modal-overlay" id="about-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">about.txt — who am i?</span>
+      <button class="modal-close" onclick="closeModal('about-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <img src="logo.png" alt="logo" style="width:70px;height:70px;object-fit:cover;border-radius:50%">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:4px"><span title="Nama kamu">Nyxveil</span></div>
+      <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:20px">architecture student · freelance creative</div>
+      <p><span title="Bio panjang kamu">Hi! I'm Nyxveil, an architecture student and freelance creative based in somewhere ehe XD. I love making things that feel alive, whether through architectural design, or music video.</span></p>
+      <p><span title="Lanjutan bio kamu">Architecture taught me how to think about space and composition, and I bring that same eye into every visual project I take on.</span></p>
+      <div class="modal-section-title">other interests</div>
+      <div class="hero-tags" style="justify-content:flex-start;margin-bottom:20px">
+        <span class="tag">music 🎵</span>
+        <span class="tag">game 🎮</span>
+        <span class="tag">art & design 🎨</span>
+        <span class="tag">cats 🐱</span>
+      </div>
+      <div class="modal-section-title">tools i use</div>
+      <div class="hero-tags" style="justify-content:flex-start">
+        <span class="tag">Photoshop</span>
+
+        <span class="tag">After Effects</span>
+        <span class="tag">Premiere</span>
+        <span class="tag">Photoshop</span>
+        <span class="tag">AutoCAD</span>
+        <span class="tag">Blender</span>
+        <span class="tag">SketchUp</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO MODAL -->
+<div class="modal-overlay" id="work-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">portfolio.exe — projects</span>
+      <button class="modal-close" onclick="closeModal('work-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Currently accepting music video projects. Here are some things I've made.</p>
+      <div class="modal-section-title">music video</div>
+      <div class="project-card">
+        <div class="project-title"><span title="Judul project kamu">【MV】Hope Is The Thing With Feathers - Robin (Chevy) | Honkai Star Rail</span></div>
+        <div class="project-desc"><span title="Deskripsi project kamu">I made this music video for my portfolio, so this is just an example of what the final output will look like. Of course, the final result in the future will be much better than this.</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title"><span title="Judul project kamu">And much more!</span></div>
+        <div class="project-desc"><span title="Deskripsi project kamu">You can check out the gallery section to see some of my other portfolios.</span></div>
+      </div>
+      <div class="modal-section-title">tools</div>
+      <div class="hero-tags" style="justify-content:flex-start">
+        <span class="tag">Photoshop</span>
+        <span class="tag">After Effects</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY MODAL -->
+<div class="modal-overlay" id="gallery-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">gallery/ — architectural design & music videos</span>
+      <button class="modal-close" onclick="closeModal('gallery-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section-title">Architectural Design</div>
+      <p>I just want to put my architectural designs here, cause why not XD</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:24px">
+        <img src="assett/c.png" alt="commission" style="aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:10px">
+        <img src="assett/enscape test 2.png" alt="commission" style="aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:10px">
+        <img src="assett/lum.png" alt="commission" style="aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:10px"></div>
+        <!-- <div style="aspect-ratio:4/3;background:linear-gradient(135deg,#f0a8d0,#c050a0);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:3rem">🌸</div> -->
+      </div>
+      <div class="modal-section-title">Music Video</div>
+      <p>Here's some of my music video portfolio.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+        <a class="yt-thumb" href="https://youtube.com/watch?v=R0fCRtEFl_E" target="_blank">
+          <img src="https://img.youtube.com/vi/R0fCRtEFl_E/hqdefault.jpg" alt="video 1" onerror="this.style.background='#333';this.style.display='block'">
+          <div class="yt-play"><div class="yt-play-btn">▶</div></div>
+          <div class="yt-label">【MV COVER】Blue - Yung Kai | Ricesumichu ver.</div>
+        </a>
+        <a class="yt-thumb" href="https://youtube.com/watch?v=EKEOMBhqQcQ" target="_blank">
+          <img src="https://img.youtube.com/vi/EKEOMBhqQcQ/hqdefault.jpg" alt="video 2" onerror="this.style.background='#333';this.style.display='block'">
+          <div class="yt-play"><div class="yt-play-btn">▶</div></div>
+          <div class="yt-label">【MV】Hope Is The Thing With Feathers - Robin (Chevy) | Honkai Star Rail</div>
+        </a>
+        <a class="yt-thumb" href="https://youtube.com/watch?v=H8d5-xEjBXQ" target="_blank">
+          <img src="https://img.youtube.com/vi/H8d5-xEjBXQ/hqdefault.jpg" alt="video 3" onerror="this.style.background='#333';this.style.display='block'">
+          <div class="yt-play"><div class="yt-play-btn">▶</div></div>
+          <div class="yt-label">【COVER】I Like You The Most - PONCHET (Ricesumichu ver. )</div>
+        </a>
+      </div>
+      <br>
+      <p style="text-align:center">see more on <a href="https://youtube.com/@nyxveil093" style="color:var(--accent)">youtube</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ MODAL -->
+<div class="modal-overlay" id="faq-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">faq.md — frequently asked</span>
+      <button class="modal-close" onclick="closeModal('faq-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-faq-item">
+        <div class="modal-faq-q">are you available for commissions?</div>
+        <div class="modal-faq-a"><span>Yes! You can request on my VGen, and i'll reach as soon as possible.</span></div>
+      </div>
+      <div class="modal-faq-item">
+        <div class="modal-faq-q">what kind of work do you take on?</div>
+        <div class="modal-faq-a">music video, and architectural design</div>
+      </div>
+      <div class="modal-faq-item">
+        <div class="modal-faq-q">do you do tutorials or educational content?</div>
+        <div class="modal-faq-a"><span>Sometimes! I post process videos on YouTube when I have the time.</span></div>
+      </div>
+      <div class="modal-faq-item">
+        <div class="modal-faq-q">how long does a project take?</div>
+        <div class="modal-faq-a">Depends on scope, but I'll give you an honest timeline estimate upfront.</div>
+      </div>
+      <div class="modal-faq-item">
+        <div class="modal-faq-q">can i use your work as reference?</div>
+        <div class="modal-faq-a">For personal/educational purposes, sure! Just credit me. For commercial use, please reach out first.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contact-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">contact.sh — say hello</span>
+      <button class="modal-close" onclick="closeModal('contact-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="text-align:center;padding:16px 0">
+        <div style="font-size:3rem;margin-bottom:12px">✉️</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;margin-bottom:8px">yayy mail!</div>
+        <p>I don't check my email very often, but feel free to send me an email anytime, and i'll reply as soon as i can.</p>
+        <div class="contact-email" style="font-size:1.2rem;margin:16px 0"><span>nyxia093@gmail.com</span></div>
+        <a class="contact-btn" href="mailto:nyxia093@gmail.com">open mail app ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LINKS MODAL -->
+<div class="modal-overlay" id="links-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">links.html — find me online</span>
+      <button class="modal-close" onclick="closeModal('links-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>All links open in a new tab. Come say hi!</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+        <a class="link-item" href="https://x.com/Nyxia093" target="_blank" style="justify-content:flex-start;gap:14px">
+          <span class="link-icon">🐦</span>
+          <div><div style="font-size:0.8rem;font-weight:500">Twitter / X</div><div style="font-size:0.68rem;color:var(--text-muted)">@Nyxia093</div></div>
+        </a>
+        <a class="link-item" href="https://youtube.com/@@nyxveil093" target="_blank" style="justify-content:flex-start;gap:14px">
+          <span class="link-icon">▶️</span>
+          <div><div style="font-size:0.8rem;font-weight:500">YouTube</div><div style="font-size:0.68rem;color:var(--text-muted)">process videos + music videos portfolio</div></div>
+        </a>
+        <a class="link-item" href="https://instagram.com/x.zhent" target="_blank" style="justify-content:flex-start;gap:14px">
+          <span class="link-icon">📸</span>
+          <div><div style="font-size:0.8rem;font-weight:500">Instagram</div><div style="font-size:0.68rem;color:var(--text-muted)">@x.zhent</div></div>
+        </a>
+        <a class="link-item" href="https://ko-fi.com/yourhandle" target="_blank" style="justify-content:flex-start;gap:14px">
+          <span class="link-icon">☕</span>
+          <div><div style="font-size:0.8rem;font-weight:500">Ko-fi</div><div style="font-size:0.68rem;color:var(--text-muted)">support my work</div></div>
+        </a>
+        <a class="link-item" href="https://vgen.co/Nyxveil" target="_blank" style="justify-content:flex-start;gap:14px">
+          <span class="link-icon"><img src="logo-dark.svg" style="width:22px;height:22px;object-fit:contain"></span>
+          <div><div style="font-size:0.8rem;font-weight:500">VGen</div><div style="font-size:0.68rem;color:var(--text-muted)">Commissions Form</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function toggleTheme() {
+    var html = document.documentElement;
+    var isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+  }
+
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) closeModal(this.id);
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+        closeModal(m.id);
+      });
+    }
+  });
+
+  function updateClock() {
+    var now = new Date();
+    var h = String(now.getHours()).padStart(2, '0');
+    var m = String(now.getMinutes()).padStart(2, '0');
+    var s = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+    var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+    var months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+    document.getElementById('clockDate').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ' ' + now.getFullYear();
+    document.getElementById('footerTime').textContent = 'local time: ' + h + ':' + m;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
