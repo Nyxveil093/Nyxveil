@@ -133,6 +133,28 @@
       </div>
     </div>
 
+    <!-- Price Panel -->
+    <div class="panel" onclick="openModal('price-modal')">
+      <div class="titlebar">
+        <div class="tb-dots"><div class="tb-dot red"></div><div class="tb-dot yellow"></div><div class="tb-dot green"></div></div>
+        <span class="tb-title">rates.txt</span>
+      </div>
+      <div class="panel-body">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:12px">commission rates 🎬</div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.72rem">
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:6px 0;color:var(--text-muted)">Music Video | Simple</td>
+            <td style="padding:6px 0;text-align:right;font-weight:500;color:var(--accent)">Start at IDR 50K / $15 per Minutes</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:6px 0;color:var(--text-muted)">Music Video | Semi - Complex</td>
+            <td style="padding:6px 0;text-align:right;font-weight:500;color:var(--accent)">Start at IDR 100K / $40 per Minutes</td>
+          </tr>
+        </table>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:10px">click for full details ↗</p>
+      </div>
+    </div>
+
     <!-- Contact Panel -->
     <div class="panel wide" onclick="openModal('contact-modal')">
       <div class="titlebar">
@@ -261,6 +283,123 @@
     </div>
   </div>
 </div>
+
+<!-- PRICE MODAL -->
+<div class="modal-overlay" id="price-modal">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span class="modal-title">rates.txt — commission rates</span>
+      <button class="modal-close" onclick="closeModal('price-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>All prices are starting rates. Final price depends on complexity, duration, and revision count. DM or email for custom quotes.</p>
+      <div class="modal-section-title">music video</div>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:20px">
+        <thead>
+          <tr style="border-bottom:1.5px solid var(--border)">
+            <th style="text-align:left;padding:8px 0;font-size:0.72rem;color:var(--text-muted);font-weight:500">type</th>
+            <th style="text-align:left;padding:8px 0;font-size:0.72rem;color:var(--text-muted);font-weight:500">includes</th>
+            <th style="text-align:right;padding:8px 0;font-size:0.72rem;color:var(--text-muted);font-weight:500">starts at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px 0;font-size:0.78rem;font-weight:500;vertical-align: top;">Music Video | Simple</td>
+            <td style="list-style:none;padding:0;margin: 8px;display:flex;flex-direction:column;gap:4px">
+              <li style="font-size:0.5rem;color:var(--text-muted)">— Simple 2D movement</li>
+              <li style="font-size:0.5rem;color:var(--text-muted)">— Simple Shapes and Colors</li>
+              <li style="font-size:0.5rem;color:var(--text-muted)">— 5-10 scene (Depend on Song / Audio)</li>
+            </td>
+            <td style="padding:10px 0;text-align:right;font-weight:700;color:var(--accent);vertical-align: top;">Start at IDR 50K / $15 per Minutes</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px 0;font-size:0.78rem;font-weight:500;vertical-align: top;">Music Video | Semi - Complex</td>
+            <td style="list-style:none;padding:0;margin: 8px;display:flex;flex-direction:column;gap:4px">
+              <li style="font-size:0.5rem;color:var(--text-muted)">— Standard 3D camera movement</li>
+              <li style="font-size:0.5rem;color:var(--text-muted)">— Standard Shapes and Colors</li>
+              <li style="font-size:0.5rem;color:var(--text-muted)">— 5-10 scene (Depend on Song / Audio)</li>
+            </td>
+            <td style="padding:10px 5px;text-align:right;font-weight:700;color:var(--accent);vertical-align: top;">Start at IDR 100K / $40 per Minutes</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal-section-title">add-ons</div>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:20px">
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:8px 0;font-size:0.75rem;color:var(--text-muted);font-weight: 500;">Original MV</td>
+            <td style="padding:8px 0;text-align:right;font-size:0.75rem;font-weight:500;color:var(--accent)">+100% from base price</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:8px 0;font-size:0.75rem;color:var(--text-muted)">Rush Deadline</td>
+            <td style="padding:8px 0;text-align:right;font-size:0.75rem;font-weight:500;color:var(--accent)">+30% from base price</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 0;font-size:0.75rem;color:var(--text-muted)">Character Animation</td>
+            <td style="padding:8px 0;text-align:right;font-size:0.75rem;font-weight:500;color:var(--accent)">IDR 50K / $25 per character</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 0;font-size:0.75rem;color:var(--text-muted)">3D Environment</td>
+            <td style="padding:8px 0;text-align:right;font-size:0.75rem;font-weight:500;color:var(--accent)">IDR 100K / $60</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+        <div style="font-family:'Syne',sans-serif;font-weight:1000;font-size:0.78rem;color:var(--text);margin-bottom:6px">Important</div>
+        <p style="margin-bottom:10px">📌 Please provide emotes or any specified assets you want used, if you already have them and want me to use them.</p>
+        <p style="margin-bottom:10px">📌 If you have an idea / reference that I will use, please include it before you book my service. otherwise, I will assume that I have the freedom to determine the style on the edit.</p>
+        <p style="margin-bottom:10px">📌 Please provide a list of credits and lyric</p>
+        <p style="margin-bottom:10px">📌 For local commissions, feel free to DM my X or Discord for order, and the payments can be made via transfer to Bank Mandiri/Bank Jago/SeaBank/GoPay</p>
+        <p style="margin-bottom:10px">📌 For international commissions, you can directly order in my <a href="https://vgen.co/Nyxveil" target="_blank" style="color:var(--accent)">VGen</a></p>
+
+      </div>
+      <div class="modal-section-title" style="margin-top:20px">terms of service</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">01. GENERAL</div>
+        <p style="margin-bottom:5px">- I am allowed to refuse ANY commissions at my own discretion.</p>
+        <p style="margin-bottom:0px">- By default, I will render the video in 1080p Resolution with 30 fps. </p>
+
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">02. PAYMENTS</div>
+        <p style="margin-bottom:5px">- Payment will be made when everything is done.</p>
+        <p style="margin-bottom:5px">- Before payment is made, I will only send Low Quality </p>
+        <p style="margin-bottom:5px">- There is no refund.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">03. REVISIONS</div>
+        <p style="margin-bottom:5px">- Major Revisions 3x Maximum.</p>
+        <p style="margin-bottom:5px">- Minor Revisions (Such as change position, font, or colors) not charged.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">04. DEADLINES AND DELIVERY</div>
+        <p style="margin-bottom:5px">- My usual working time is around 1 - 2 weeks.</p>
+        <p style="margin-bottom:5px">- Files will be delivered in Google Drive Folder.</p>
+        <p style="margin-bottom:5px">- I will let you know when I start working. If I haven't told you yet, it means I am working on something else at the moment.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">05. USE</div>
+        <p style="margin-bottom:5px">- Commissions are for commercial use only.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">06. INTELLECTUAL PROPERTY RIGHTS</div>
+        <p style="margin-bottom:5px">- You can credit me by mentioning my X account or my YouTube account.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">07. REFUNDS</div>
+        <p style="margin-bottom:5px">- No Refunds , except I am unable to complete the work for any reason.</p>
+      </div>
+      <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:0.75rem;color:var(--text-muted);line-height:1.7">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);margin-bottom:6px">08. COMMUNICATION</div>
+        <p style="margin-bottom:5px">- We can discuss through Discord or X.</p>
+        <p style="margin-bottom:5px">- Please note, we may be in different time zones, so it may take more time for me to reply to your message. Please leave a message for me.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- FAQ MODAL -->
 <div class="modal-overlay" id="faq-modal">
